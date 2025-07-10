@@ -112,6 +112,32 @@
             margin-bottom: 8px;
             margin-top: 4px;
         }
+
+        .whatsapp-btn {
+            margin-top: 24px;
+            display: inline-block;
+            background-color: #25d366;
+            color: #fff;
+            font-size: 20px;
+            font-family: Arial, sans-serif;
+            padding: 12px 28px;
+            border-radius: 6px;
+            border: none;
+            text-decoration: none;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(37, 211, 102, 0.1);
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .whatsapp-btn:hover,
+        .whatsapp-btn:focus {
+            background-color: #1ebe5d;
+            transform: scale(1.04);
+        }
+
+        .hidden {
+            display: none !important;
+        }
     </style>
 </head>
 
@@ -123,10 +149,10 @@
         <div class="coupon coupon-content state-1-content">
             <div style="width: 100%; display: flex; flex-direction: column; align-items: center;">
                 <div class="mensaje-inicial">Te has ganado un cupón<br>¿deseas cobrarlo?</div>
-                <label for="state-2" class="reveal-button">Revelar</label>
+                <label for="state-2" class="reveal-button" id="reveal-btn">Revelar</label>
             </div>
         </div>
-        <div class="coupon coupon-content state-2-content">
+        <div class="coupon coupon-content state-2-content" style="flex-direction: column; align-items: center;">
             <div class="coupon-interno">
                 <div class="number">
                     <a href="https://wa.me/50498112049" target="_blank">98112049</a>
@@ -138,8 +164,27 @@
                     <a href="https://wa.me/50498112049" target="_blank">98112049</a>
                 </div>
             </div>
+            <a class="whatsapp-btn hidden" href="https://wa.me/50498112049" target="_blank" rel="noopener" id="whatsapp-btn">Escríbeme</a>
         </div>
     </div>
+    <script>
+        const revealBtn = document.getElementById('reveal-btn');
+        const state2Radio = document.getElementById('state-2');
+        const whatsappBtn = document.getElementById('whatsapp-btn');
+
+        revealBtn.addEventListener('click', function () {
+            setTimeout(() => {
+                whatsappBtn.classList.remove('hidden');
+            }, 10000); // 10 segundos
+        });
+
+        // Si el usuario vuelve a la pantalla de inicio, vuelve a ocultar el botón
+        document.getElementById('state-1').addEventListener('change', function () {
+            if (this.checked) {
+                whatsappBtn.classList.add('hidden');
+            }
+        });
+    </script>
 </body>
 
 </html>
