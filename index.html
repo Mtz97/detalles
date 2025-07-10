@@ -12,10 +12,10 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            margin: 0;
         }
 
         .coupon {
-            margin-bottom: 10vh;
             border: 2px dashed #000;
             border-radius: 15px;
             width: 38vh;
@@ -73,6 +73,9 @@
 
         .coupon-content {
             display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
         #state-1:checked~.coupon-wrapper .state-1-content {
@@ -91,6 +94,23 @@
             cursor: pointer;
             border-radius: 5px;
             color: #ff6961;
+            margin-top: 12px;
+            outline: none;
+            transition: background 0.2s;
+        }
+
+        .reveal-button:focus,
+        .reveal-button:hover {
+            background: #ffe0e0;
+        }
+
+        .mensaje-inicial {
+            color: #fff;
+            font-family: Arial, sans-serif;
+            font-size: 2.2vh;
+            text-align: center;
+            margin-bottom: 8px;
+            margin-top: 4px;
         }
     </style>
 </head>
@@ -101,7 +121,10 @@
 
     <div class="coupon-wrapper">
         <div class="coupon coupon-content state-1-content">
-            <label for="state-2" class="reveal-button">Tienes un cupon, deseas cobrarlo</label>
+            <div style="width: 100%; display: flex; flex-direction: column; align-items: center;">
+                <div class="mensaje-inicial">Te has ganado un cupón<br>¿deseas cobrarlo?</div>
+                <label for="state-2" class="reveal-button">Revelar</label>
+            </div>
         </div>
         <div class="coupon coupon-content state-2-content">
             <div class="coupon-interno">
