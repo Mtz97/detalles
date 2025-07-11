@@ -107,10 +107,13 @@
     <input type="radio" name="state" id="state-1" checked>
     <input type="radio" name="state" id="state-2">
 
-    <div class="coupon-wrapper">
-        <div class="coupon coupon-content state-1-content">
-            <label for="state-2" class="reveal-button">Desvelar</label>
+ <div class="coupon coupon-content state-1-content">
+            <div style="width: 100%; display: flex; flex-direction: column; align-items: center;">
+                <div class="mensaje-inicial">Te has ganado un cupón<br>¿deseas cobrarlo?</div>
+                <label for="state-2" class="reveal-button" id="reveal-btn">Revelar</label>
+            </div>
         </div>
+    
         <div class="coupon coupon-content state-2-content">
             <div class="coupon-interno">
                 <div class="number">98112049</div>
