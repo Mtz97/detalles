@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tarjeta de Presentación</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <div class="tarjeta">
+    <img src="https://via.placeholder.com/100" alt="Foto de perfil" class="perfil">
+    <h2>Gerson Jose Matamoros Gonzalez</h2>
+    <p class="cargo">Gerente Dpto. IT</p>
+    <p class="empresa">COBANMA</p>
+    <hr>
+    <p class="contacto">📧 matzalez@cobanma.com</p>
+    <p class="contacto">📞 +504 98112049</p>
+    <div class="redes">
+      <a href="#">LinkedIn</a> | <a href="#">GitHub</a>
+    </div>
+  </div>
+</body>
+</html>
