@@ -1,32 +1,57 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tarjeta Flip CV</title>
-  <link rel="stylesheet" href="estilos.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Cupones</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 2rem;
+        }
+
+        .cupones {
+            display: flex;
+            gap: 2rem;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cupon-link {
+            background-color: #ff6961;
+            color: #fff;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            transition: background-color 0.3s;
+        }
+
+        .cupon-link:hover {
+            background-color: #ce4a4b;
+        }
+    </style>
 </head>
+
 <body>
-  <label class="flip-card">
-    <input type="checkbox" class="flip-checkbox" />
-    <div class="flip-card-inner">
-      <div class="flip-card-front">
-        <img src="logo-de-empresa.jpg" alt="Logo de empresa" class="logo" />
-      </div>
-      <div class="flip-card-back">
-        <img src="foto-personal.jpg" alt="Foto personal" class="foto" />
-        <h2>Gerson Gonzalez</h2>
-        <p class="cargo">Gerente IT</p>
-        <p class="empresa">COBANMA</p>
-        <hr />
-        <p>📧 matzalez@cobanma.com</p>
-        <p>📞 +504 98112049</p>
-        <div class="redes">
-          <a href="#" target="_blank">LinkedIn</a> |
-          <a href="#" target="_blank">GitHub</a>
-        </div>
-      </div>
+    <h1>Mis Cupones</h1>
+    <div class="cupones">
+        <a href="cupon1.html" class="cupon-link">Ver Cupón 1</a>
+        <a href="cupon2.html" class="cupon-link">Ver Cupón 2</a>
+        <a href="cupon3.html" class="cupon-link">Ver Cupón 3</a>
     </div>
-  </label>
 </body>
+
 </html>
